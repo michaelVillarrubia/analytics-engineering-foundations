@@ -12,6 +12,11 @@ def count_column_values(file_path, column_name):
 
     return counts
 
+def create_csv_file(filename, content):
+    with open("data/raw/" + filename + ".csv", 'w') as file:
+        file.write(content)
+    print(f"File '{filename}' created and written successfully.")
+
 def gettingBackIntoIt():
     #splice 
     word = "splice"
@@ -32,6 +37,9 @@ def gettingBackIntoIt():
 
 def main():
     gettingBackIntoIt()
+    results = count_column_values("data/raw/sample.csv", "category")
+    print(results.items)
+    create_csv_file("sample2", "id, category, num\n1,A,24\n2,B,37 ")
 
 if __name__ == "__main__":
     main()
