@@ -12,8 +12,7 @@ def count_column_values(file_path, column_name):
 
     return counts
 
-
-def main():
+def gettingBackIntoIt():
     #splice 
     word = "splice"
     print(word[0:2])
@@ -30,6 +29,9 @@ def main():
     languages.append('c#')
     languages.append('java')
     print(languages)
+
+def main():
+    gettingBackIntoIt()
 
 if __name__ == "__main__":
     main()
