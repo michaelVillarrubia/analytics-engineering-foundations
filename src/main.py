@@ -8,7 +8,11 @@ def count_column_values(file_path, column_name):
         reader = csv.DictReader(f)
         for row in reader:
             value = row[column_name]
+<<<<<<< HEAD
             counts[value] += int(row["amount"])
+=======
+            counts[value] += 1
+>>>>>>> 89fcb8c9a444bb5cc9adc5a802850b9a2b54df28
 
     return counts
 
@@ -35,11 +39,19 @@ def gettingBackIntoIt():
     languages.append('java')
     print(languages)
 
+<<<<<<< HEAD
 
 def main():
     gettingBackIntoIt()
     results = count_column_values("data/raw/sample.csv", "category")
     print(results)
+=======
+def main():
+    gettingBackIntoIt()
+    results = count_column_values("data/raw/sample.csv", "category")
+    print(results.items)
+    create_csv_file("sample2", "id, category, num\n1,A,24\n2,B,37 ")
+>>>>>>> 89fcb8c9a444bb5cc9adc5a802850b9a2b54df28
 
 if __name__ == "__main__":
     main()
